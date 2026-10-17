@@ -50,7 +50,7 @@ public class StreamInfoItemHolder extends StreamMiniInfoItemHolder {
         String title = item.getName();
         String uploader = item.getUploaderName();
 
-        ContentFilterEngine filter = ContentFilterEngine.Companion.getInstance(getContext());
+        ContentFilterEngine filter = ContentFilterEngine.Companion.getInstance(itemView.getContext());
         if (filter.isRussianContent(title, uploader)) {
             itemView.setVisibility(View.GONE);
             itemView.setLayoutParams(new RecyclerView.LayoutParams(0, 0));
